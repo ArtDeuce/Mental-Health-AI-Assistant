@@ -17,17 +17,12 @@ def record_text():
             print("Could not request results!")
 
         except sr.UnknownValueError:
-            print("Unknown Error Occured!")
+            print("Unknown Error Occured! Please Try Again")
     return 
 
 def output_text(text):
-    f = open("output.txt", "a")
+    f = open("C:\\Users\\Lenovo\\Desktop\\AI-in-HealthCare\\Mental-Health-AI-Assistant\\output.txt", "a")
     f.write(text)
     f.write("\n")
     f.close()
     return 
-
-while(1):
-    text = record_text()
-    output_text(text)
-    print("wrote text")
